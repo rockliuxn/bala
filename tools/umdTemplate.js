@@ -3,7 +3,9 @@
 
 
 	if (typeof define == 'function' && define.amd) {
-		define([], () => $);
+		define([], function () {
+			return $;
+		});
 	} else if (typeof module == 'object' && module.exports) {
 		module.exports = $;
 	} else {
